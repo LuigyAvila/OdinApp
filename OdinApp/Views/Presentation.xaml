@@ -2,7 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OdinApp.Views.Presentation">
-    <StackLayout>
-        <Image Source="odin.png"/>
-    </StackLayout>
+    <Grid BackgroundColor="#0096FF">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Image Source="https://cdn-icons-png.flaticon.com/512/1396/1396673.png"
+                   HeightRequest="150"
+                   x:Name="imglogo"/>
+            <Label Text="Audit"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   FontSize="30"/>
+            <Label Text="From"
+                   HorizontalOptions="Center"
+                   HeightRequest="80"/>
+            <Label Text="By Demon Dog" HorizontalOptions="Center"
+                   TextColor="#5800FF"
+                   FontSize="Medium"
+                   FontAttributes="Bold"/>
+        </StackLayout>
+    </Grid>
+  
 </ContentPage>

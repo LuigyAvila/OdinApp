@@ -2,9 +2,24 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OdinApp.Views.IntroTutorial.View3">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
-  </ContentView.Content>
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Image Source="https://cdn-icons.flaticon.com/png/512/1126/premium/1126931.png?token=exp=1659093033~hmac=62ae7f93febcfa117475a7637b6a2d12"
+               Margin="30,0,30,0" />
+        <Label Grid.Row="1"
+               Text="Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+               FontAttributes="Bold"
+               FontSize="Medium"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               Margin="10" />
+        <Label Text="LOREM IPSUM"
+               HorizontalOptions="Center"
+               FontSize="40"
+               Grid.Row="2" />
+    </Grid>
 </ContentView>

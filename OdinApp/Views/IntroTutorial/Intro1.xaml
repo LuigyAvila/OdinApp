@@ -1,12 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:OdinApp.Views.IntroTutorial"
              x:Class="OdinApp.Views.IntroTutorial.Intro1">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid BackgroundColor="#white">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <CarouselView Grid.Row="0"
+                      IndicatorView="Indicator">
+            <CarouselView.ItemsSource>
+                <x:Array Type="{x:Type ContentView}">
+                    <views:View1 />
+                    <views:View2 />
+                    <views:View3 />
+                </x:Array>
+            </CarouselView.ItemsSource>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView Content="{Binding .}" />
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <Grid Grid.Row="1" Padding="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <IndicatorView x:Name="Indicator"
+                          IndicatorColor="White"
+                           SelectedIndicatorColor="CornflowerBlue"
+                           Grid.ColumnSpan="2"/>
+            <Button Text="Skip"
+                    Grid.Column="1" 
+                    HorizontalOptions="End"
+                    CornerRadius="30"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="#0096FF"
+                    x:Name="btnskip"
+                    VerticalOptions="CenterAndExpand"/>
+        </Grid> 
+       
+        
+    </Grid>
 </ContentPage>

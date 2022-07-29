@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OdinApp.Views;
+using OdinApp.Views.IntroTutorial;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +12,7 @@ namespace OdinApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new CreateAccount();
         }
 
         protected override void OnStart()

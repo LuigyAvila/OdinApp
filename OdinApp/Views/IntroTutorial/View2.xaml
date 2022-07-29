@@ -2,9 +2,22 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OdinApp.Views.IntroTutorial.View2">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
-  </ContentView.Content>
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Image Source="https://cdn-icons.flaticon.com/png/512/1339/premium/1339689.png?token=exp=1659093403~hmac=2b8603849ebe902a825c155210e5a196"
+               Margin="30,0,30,0" />
+        <Label Grid.Row="1"
+               Text="simply dumm"
+               FontAttributes="Bold"
+               FontSize="Medium"
+               HorizontalOptions="Center" />
+        <Label Text="Lorem"
+               HorizontalOptions="Center"
+               FontSize="60"
+               Grid.Row="2" />
+    </Grid>
 </ContentView>
